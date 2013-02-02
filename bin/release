@@ -4,4 +4,6 @@
 # Just an empty hash, we don't do anything by default
 cat <<EOF
 ---
+default_process_types:
+  web: bundle exec middleman server -p \$PORT
 EOF
