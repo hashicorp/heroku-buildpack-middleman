@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# bin/compile <build-dir> <cache-dir>
+
+# Work in the build directory
+cd $1
+
+# Just build the static site
+bundle exec middleman build -c
