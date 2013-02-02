@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# bin/detect <build-dir>
+
+if [ -f $1/config.rb ]; then
+    grep "middleman" $1/Gemfile.lock >/dev/null
+    if [ $? -eq 0 ]; then
+        echo "Middleman"
+        exit 0
+    fi
+fi
+
+exit 1
