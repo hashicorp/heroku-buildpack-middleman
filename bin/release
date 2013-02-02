@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# bin/release <build-dir>
+
+# Just an empty hash, we don't do anything by default
+cat <<EOF
+---
+EOF
