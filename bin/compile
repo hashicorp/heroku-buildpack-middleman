@@ -5,4 +5,4 @@
 cd $1
 
 # Just build the static site
-bundle exec middleman build -c
+bin/bundle exec middleman build -c
