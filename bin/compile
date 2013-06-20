@@ -9,5 +9,7 @@ for profile in ./.profile.d/*; do
     . ${profile}
 done
 
+env | sort
+
 # Just build the static site
 bundle exec middleman build -c
