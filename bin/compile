@@ -9,7 +9,12 @@ for profile in ./.profile.d/*; do
     . ${profile}
 done
 
-ls -hal ./vendor
+ls -hal ./vendor/ruby-2.0.0
+
+echo
+echo
+
+env | sort
 
 # Fix some paths for bundler
 export GEM_PATH="./vendor/bundle/ruby/1.9.1"
