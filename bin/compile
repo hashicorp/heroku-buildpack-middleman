@@ -9,7 +9,7 @@ for profile in ./.profile.d/*; do
     . ${profile}
 done
 
-cat `which bundle`
+which ruby
 
 echo
 echo
