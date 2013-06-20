@@ -9,22 +9,5 @@ for profile in ./.profile.d/*; do
     . ${profile}
 done
 
-# Add any vendored Ruby version to the bin
-RUBY_VERSION=$(cat ./vendor/heroku/buildpack_ruby_version)
-if [ ! -z ${RUBY_VERSION} ]; then
-    echo "-----> Adding vendored Ruby to PATH: ${RUBY_VERSION}"
-    export PATH="./vendor/${RUBY_VERSION}/bin:$PATH"
-fi
-
-find . -maxdepth 6 -type f -exec ls -ld "{}" \;
-
-echo
-echo
-
-env | sort
-
-# Fix some paths for bundler
-export GEM_PATH="./vendor/bundle/ruby/1.9.1"
-
 # Just build the static site
 bundle exec middleman build -c
