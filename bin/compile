@@ -4,6 +4,8 @@
 # Work in the build directory
 cd $1
 
+ls -al .
+
 # Fix some paths for bundler
 export GEM_PATH="./vendor/bundle/ruby/1.9.1"
 
