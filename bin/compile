@@ -9,6 +9,11 @@ for profile in ./.profile.d/*; do
     . ${profile}
 done
 
+cat `which bundle`
+
+echo
+echo
+
 env | sort
 
 # Just build the static site
