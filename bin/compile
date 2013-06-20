@@ -8,4 +8,4 @@ cd $1
 export GEM_PATH="./vendor/bundle/ruby/1.9.1"
 
 # Just build the static site
-bin/bundle exec middleman build -c
+bundle exec middleman build -c
