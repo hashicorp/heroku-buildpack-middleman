@@ -10,6 +10,7 @@ for profile in ./.profile.d/*; do
 done
 
 which ruby
+ruby --version
 
 echo
 echo
