@@ -10,18 +10,13 @@ for profile in ./.profile.d/*; do
 done
 
 # Add any vendored Ruby version to the bin
-RUBY_VERSION=$(cat $2/buildpack_ruby_version)
+RUBY_VERSION=$(cat ./vendor/heroku/buildpack_ruby_version)
 if [ ! -z ${RUBY_VERSION} ]; then
     echo "-----> Adding vendored Ruby to PATH: ${RUBY_VERSION}"
     export PATH="./vendor/${RUBY_VERSION}/bin:$PATH"
 fi
 
-ls -hal /app/vendor/bundle/ruby/2.0.0/bin
-
-echo
-echo
-
-ls -hal ./vendor/ruby-2.0.0/bin
+find . -maxdepth 5 -type f -exec ls -ld "{}" \;
 
 echo
 echo
