@@ -16,7 +16,7 @@ if [ ! -z ${RUBY_VERSION} ]; then
     export PATH="./vendor/${RUBY_VERSION}/bin:$PATH"
 fi
 
-find . -maxdepth 5 -type f -exec ls -ld "{}" \;
+find . -maxdepth 6 -type f -exec ls -ld "{}" \;
 
 echo
 echo
