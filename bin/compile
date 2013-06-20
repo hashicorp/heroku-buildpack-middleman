@@ -9,7 +9,12 @@ for profile in ./.profile.d/*; do
     . ${profile}
 done
 
-ls -hal ./vendor/ruby-2.0.0
+ls -hal /app/vendor/bundle/ruby/2.0.0/bin
+
+echo
+echo
+
+ls -hal ./vendor/ruby-2.0.0/bin
 
 echo
 echo
