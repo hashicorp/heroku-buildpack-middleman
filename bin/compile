@@ -9,8 +9,7 @@ for profile in ./.profile.d/*; do
     . ${profile}
 done
 
-which ruby
-ruby --version
+ls -hal /app/bin
 
 echo
 echo
