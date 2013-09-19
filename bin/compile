@@ -10,4 +10,4 @@ for profile in ./.profile.d/*; do
 done
 
 # Just build the static site
-bundle exec middleman build -c
+bundle exec middleman build
