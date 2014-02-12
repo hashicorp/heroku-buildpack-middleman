@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-# bin/compile <build-dir> <cache-dir>
+# bin/compile <build-dir> <cache-dir> <env-dir>
 
 # Work in the build directory
 cd $1
@@ -8,6 +8,14 @@ cd $1
 for profile in ./.profile.d/*; do
     . ${profile}
 done
+
+# If there is an env dir, source it
+if [ -d "$3" ]; then
+    for e in $(ls $3); do
+        export "$e=$(cat $3/$e)"
+        :
+    done
+fi
 
 # Just build the static site
 bundle exec middleman build --clean --verbose
