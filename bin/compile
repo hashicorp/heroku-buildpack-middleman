@@ -4,6 +4,10 @@
 # Work in the build directory
 cd $1
 
+# Set HOME to build directory in order to get the bundle command in the PATH
+HOME_BACK=$HOME
+export HOME=$1
+
 # Source in all the profile stuff
 for profile in ./.profile.d/*; do
     . ${profile}
@@ -16,6 +20,9 @@ if [ -d "$3" ]; then
         :
     done
 fi
+
+# Set HOME back to default value
+export HOME=$HOME_BACK
 
 # Just build the static site
 bundle exec middleman build --clean --verbose
